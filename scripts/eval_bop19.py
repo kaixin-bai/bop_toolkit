@@ -65,7 +65,7 @@ p = {
   # description of the format. Example results can be found at:
   # http://ptak.felk.cvut.cz/6DB/public/bop_sample_results/bop_challenge_2019/
   'result_filenames': [
-    '/relative/path/to/csv/with/results',
+    '/data/hdd1/kb/agile/bkx_master/6dofbkx/datasets/ycbv/kx-iros15_ycbv-test.csv',
   ],
 
   # Folder with results to be evaluated.
@@ -84,9 +84,9 @@ p = {
 # Command line arguments.
 # ------------------------------------------------------------------------------
 parser = argparse.ArgumentParser()
-parser.add_argument('--renderer_type', default=p['renderer_type'])
+parser.add_argument('--renderer_type', default="python")
 parser.add_argument('--result_filenames',
-                    default=','.join(p['result_filenames']),
+                    default="kx-iros15_ycbv-test.csv",
                     help='Comma-separated names of files with results.')
 parser.add_argument('--results_path', default=p['results_path'])
 parser.add_argument('--eval_path', default=p['eval_path'])
@@ -122,7 +122,7 @@ for result_filename in p['result_filenames']:
   times = {}
   times_available = True
   for est in ests:
-    result_key = '{:06d}_{:06d}'.format(est['scene_id'], est['im_id'])
+    result_key = '{:06d}_{:06d}_{:06d}'.format(est['scene_id'], est['im_id'], est['obj_id'])
     if est['time'] < 0:
       # All estimation times must be provided.
       times_available = False
@@ -146,7 +146,7 @@ for result_filename in p['result_filenames']:
     # Calculate error of the pose estimates.
     calc_errors_cmd = [
       'python',
-      os.path.join('scripts', 'eval_calc_errors.py'),
+      os.path.join('eval_calc_errors.py'),
       '--n_top={}'.format(error['n_top']),
       '--error_type={}'.format(error['type']),
       '--result_filenames={}'.format(result_filename),
@@ -195,7 +195,7 @@ for result_filename in p['result_filenames']:
 
         calc_scores_cmd = [
           'python',
-          os.path.join('scripts', 'eval_calc_scores.py'),
+          os.path.join('eval_calc_scores.py'),
           '--error_dir_paths={}'.format(error_dir_path),
           '--eval_path={}'.format(p['eval_path']),
           '--targets_filename={}'.format(p['targets_filename']),
