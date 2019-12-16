@@ -247,7 +247,7 @@ def load_bop_results(path, version='bop19'):
             'scene_id': int(elems[0]),
             'im_id': int(elems[1]),
             'obj_id': int(elems[2]),
-            'score': float(elems[3]),
+            'score': float(0.0),
             'R': np.array(
               list(map(float, elems[4].split())), np.float).reshape((3, 3)),
             't': np.array(
