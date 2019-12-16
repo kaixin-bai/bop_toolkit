@@ -63,7 +63,7 @@ p = {
   # using eval_calc_errors.py.
   # Example: 'hodan-iros15_lm-test/error=vsd_ntop=1_delta=15_tau=20_cost=step'
   'error_dir_paths': [
-    r'/path/to/calculated/errors',
+    r'kx-iros15_ycbv-test/error=vsd_ntop=1_delta=15.000_tau=0.500',
   ],
 
   # Folder for the calculated pose errors and performance scores.
