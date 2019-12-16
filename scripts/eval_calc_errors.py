@@ -60,7 +60,7 @@ p = {
   # description of the format. Example results can be found at:
   # http://ptak.felk.cvut.cz/6DB/public/bop_sample_results/bop_challenge_2019/
   'result_filenames': [
-    '/path/to/csv/with/results',
+    '/data/hdd1/kb/agile/bkx_master/6dofbkx/datasets/ycbv/kx-iros15_ycbv-test.csv',
   ],
 
   # Folder with results to be evaluated.
@@ -98,9 +98,9 @@ parser.add_argument('--vsd_normalized_by_diameter',
                     default=p['vsd_normalized_by_diameter'])
 parser.add_argument('--max_sym_disc_step', default=p['max_sym_disc_step'])
 parser.add_argument('--skip_missing', default=p['skip_missing'])
-parser.add_argument('--renderer_type', default=p['renderer_type'])
+parser.add_argument('--renderer_type', default="python")
 parser.add_argument('--result_filenames',
-                    default=','.join(p['result_filenames']),
+                    default="kx-iros15_ycbv-test.csv",
                     help='Comma-separated names of files with results.')
 parser.add_argument('--results_path', default=p['results_path'])
 parser.add_argument('--eval_path', default=p['eval_path'])
