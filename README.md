@@ -63,3 +63,16 @@ python scripts/eval_bop19.py --renderer_type=python --result_filenames=NAME_OF_C
 ```
 --renderer_type: Either "python" or "cpp" (you need to install the C++ Renderer for the latter).
 --result_filenames: Comma-separated filenames with pose estimates in .csv ([examples](http://ptak.felk.cvut.cz/6DB/public/bop_sample_results)).
+
+## 补充
+使用ycb video dataset进行训练，使用ycbv进行测试
+测试数据集的文件结构如下：
+* **datasets**
+  * **datasets/kx-iros15_ycbv-test.csv**
+  * **datasets/ycbv**
+    * **datasets/ycbv/camera_cmu.json**
+    * **datasets/ycbv/camera_uw.json**
+    * **datasets/ycbv/models**
+    * **datasets/ycbv/models_eval**
+    * **datasets/ycbv/models_fine**
+    * **datasets/ycbv/test**  # test是数据集，其中的文件夹是“000048”等
