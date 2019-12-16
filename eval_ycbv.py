@@ -1,3 +1,5 @@
+# 生成csv文件的案例，其中“PoseWriter”是csv写入类，“PoseEstimate”是位姿检测的类
+
 import numpy as np
 from numpy import ma
 import open3d as o3d
