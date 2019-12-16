@@ -6,18 +6,19 @@
 ######## Basic ########
 
 # Folder with the BOP datasets.
-datasets_path = r'/path/to/bop/datasets'
+# datasets_path = r'/path/to/bop/datasets'
+datasets_path = r'/data/hdd1/kb/agile/bkx_master/6dofbkx/datasets/ycbv'
 
 # Folder with pose results to be evaluated.
-results_path = r'/path/to/folder/with/results'
+results_path = r'/data/hdd1/kb/agile/bkx_master/6dofbkx/datasets/ycbv'
 
 # Folder for the calculated pose errors and performance scores.
-eval_path = r'/path/to/eval/folder'
+eval_path = r'/data/hdd1/kb/agile/bkx_master/6dofbkx/datasets/ycbv'
 
 ######## Extended ########
 
 # Folder for outputs (e.g. visualizations).
-output_path = r'/path/to/output/folder'
+output_path = r'output_path'
 
 # For offscreen C++ rendering: Path to the build folder of bop_renderer (github.com/thodan/bop_renderer).
 bop_renderer_path = r'/path/to/bop_renderer/build'
