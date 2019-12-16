@@ -76,3 +76,9 @@ python scripts/eval_bop19.py --renderer_type=python --result_filenames=NAME_OF_C
     * **datasets/ycbv/models_eval**
     * **datasets/ycbv/models_fine**
     * **datasets/ycbv/test**  # test是数据集，其中的文件夹是“000048”等
+## 使用案例记录
+```
+python generate_example_csv_file.py
+python eval_ycbv.py
+```
+然后就可以放心使用script文件夹中的文件了。
